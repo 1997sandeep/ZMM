@@ -1,0 +1,21 @@
+unmanaged implementation in class zbp_mb_data_det unique;
+strict ( 1 );
+
+define behavior for ZMB_DATA_DET //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) ebeln, mbno;
+
+  mapping for zmeas_book_h_tbl {
+  mbno = mbno;
+  ebeln = ebeln;
+  delflag = delflag;
+
+  }
+}

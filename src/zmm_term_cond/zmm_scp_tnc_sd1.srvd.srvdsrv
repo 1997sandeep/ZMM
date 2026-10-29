@@ -1,0 +1,12 @@
+@EndUserText.label: 'Service Definition - WO T&C'
+define service ZMM_SCP_TNC_SD1 {
+  expose ZMM_SCP_TNC_CDS1 as zmm_tnc;
+  expose zmm_f4_ebeln     as F4_ebeln;
+  expose ZMM_SCP_TNC_H    as Header;
+  expose ZMM_SCP_TNC_I    as ItemSet;
+  expose ZMM_TNC_ITEM_F   as ItemFinal;
+  expose ZMM_SCP_TNC_ITEM as ItemNew;
+  expose ZMM_SCP_TNC_WTT  as F4_Taxtype;
+  expose ZMM_SCP_TNC_WTC  as F4_Taxode;
+  expose ZMM_WO_TNC_TDS   as TDS_VAL;
+}

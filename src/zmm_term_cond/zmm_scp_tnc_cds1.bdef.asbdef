@@ -1,0 +1,81 @@
+unmanaged implementation in class zbp_mm_scp_tnc_cds1 unique;
+strict ( 1 );
+
+define behavior for ZMM_SCP_TNC_CDS1 alias ZMM_TNC
+//persistent table zmmt_scp_tnc1
+//etag master LocalLastChangedAt
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+
+field (mandatory : create)
+Ebeln;
+
+  field ( readonly )
+   LocalCreatedAt,
+   LocalCreatedBy,
+   LastChangedAt,
+   LocalLastChangedAt,
+   LocalLastChangedBy;
+
+  field ( readonly : update)
+   Ebeln;
+
+  create;
+  update;
+  delete;
+  mapping for zmmt_scp_tnc1
+  {
+    Ebeln = ebeln;
+    ZinWo = zin_wo;
+    Zret = zret;
+    Zwith = zwith;
+    Ztds = ztds;
+    Zlbc = zlbc;
+    Zwct = zwct;
+    ZroyAppl = zroy_appl;
+    Zins = zins;
+    Zmat = zmat;
+    Zfud = zfud;
+    Zacc = zacc;
+    Zele = zele;
+    Zpen = zpen;
+    Zbonus = zbonus;
+    FinalAppr1 = final_appr1;
+    FinalAppr2 = final_appr2;
+    FinalAppr3 = final_appr3;
+    WtWithcd = wt_withcd;
+    Zgst = zgst;
+    DprMandt = dpr_mandt;
+    ZadcWith = zadc_with;
+    ZadcWithcd = zadc_withcd;
+    ZbgReq = zbg_req;
+    ZbgNumber = zbg_number;
+    ZbgDate = zbg_date;
+    ZbgBank = zbg_bank;
+    ZbgAmt = zbg_amt;
+    ZbgEdate = zbg_edate;
+    zcurr = zcurr;
+    ZvendCode = zvend_code;
+    Zproject = zproject;
+    Zdoctype = zdoctype;
+    ZgstNo = zgst_no;
+    ZpanNo = zpan_no;
+    ZwoDesc = zwo_desc;
+    ZretExt = zret_ext;
+    ZmobAdv = zmob_adv;
+    ZmachAdv = zmach_adv;
+    ZworkDone = zwork_done;
+    ZmatAdv = zmat_adv;
+    Zroylt   = zroylt;
+    LocalCreatedBy =   local_created_by  ;
+    LocalCreatedAt = local_created_at      ;
+    LocalLastChangedBy = local_last_changed_by ;
+    LocalLastChangedAt = local_last_changed_at ;
+    LastChangedAt = last_changed_at       ;
+    base_chk   = base_chk ;
+  pay_chk = pay_chk;
+  }
+
+}

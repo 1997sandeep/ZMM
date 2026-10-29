@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for attachment table'
+define service ZSD_ATTACH_TAB_V2 {
+  expose ZCDS_ATTACH_TAB_V2  as attach_tab;
+  expose ZC_ATTACH_TAB_VIEWW as zattach_read;
+}

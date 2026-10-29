@@ -1,0 +1,51 @@
+managed implementation in class ZBP_R_MMT_SCP_TAXMAIN unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_MMT_SCP_TAXMAIN alias ZrMmtScpTaxmain
+persistent table ZMMT_SCP_TAXMAIN
+draft table ZMMT_SCP_TAXMA_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   TaxCode,
+   ItemCode;
+
+  field ( readonly )
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   TaxCode,
+   ItemCode;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZMMT_SCP_TAXMAIN
+  {
+    TaxCode = tax_code;
+    ItemCode = item_code;
+    CukyField = cuky_field;
+    TaxPer = tax_per;
+    Description = description;
+    LocalCreatedBy = local_created_by;
+    LocalCreatedAt = local_created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+  }
+}

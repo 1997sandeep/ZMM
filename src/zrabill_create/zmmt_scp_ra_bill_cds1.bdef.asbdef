@@ -1,0 +1,77 @@
+unmanaged implementation in class zbp_mmt_scp_ra_bill_cds1 unique;
+strict ( 1 );
+
+define behavior for ZMMT_SCP_RA_BILL_CDS1 alias zscp_rabill
+//persistent table zmmt_scp_rabill1
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  field ( readonly : update ) RaBillNo, Ebeln, Ebelp;
+
+  field ( readonly )
+  LocalCreatedAt,
+  LocalCreatedBy,
+  LastChangedAt,
+  LocalLastChangedAt,
+  LocalLastChangedBy;
+
+  create;
+  update;
+  delete;
+  mapping for zmmt_scp_rabill1 // control zmmt_scp_rab_adv
+    {
+      RaBillNo           = ra_bill_no;
+      Ebeln              = ebeln;
+      Ebelp              = ebelp;
+      Hierarchy          = hierarchy;
+      Rcount             = rcount;
+      ThisBill           = this_bill;
+      ThisBillD          = this_bill_d;
+      HoldQty            = hold_qty;
+      ThisAct            = this_act;
+      Uom                = uom;
+      RaBillFrom         = ra_bill_from;
+      RaBillTo           = ra_bill_to;
+      SheetNo            = sheet_no;
+      FinalProces        = final_proces;
+      PostDate           = post_date;
+      WithoutDpr         = without_dpr;
+      Remarks            = remarks;
+      WoQtyNew           = wo_qty_new;
+      QtyDeduct          = qty_deduct;
+      QtyDeductUtd       = qty_deduct_utd;
+      AmtDeduct          = amt_deduct;
+      Cutover            = cutover;
+      RelHoldQty         = rel_hold_qty;
+      TotalHold          = total_hold;
+      QtyReducedReco     = qty_reduced_reco;
+      PrevHold           = prev_hold;
+      FinalBill          = final_bill;
+      ReversalNo         = reversal_no;
+      ReversalDate       = reversal_date;
+      Erdat              = erdat;
+      FinalProcess       = final_process;
+      Sesno              = sesno;
+      Rate               = rate;
+      ThisBillAmt        = this_bill_amt;
+      UptoPrevAmt        = upto_prev_amt;
+      UptoDateAmt        = upto_date_amt;
+      Zcurr              = zcurr;
+      MbsQty             = mbs_qty;
+      DelFlag            = del_flag;
+      InvNum             = inv_num;
+      InvDate            = inv_date;
+      Deduction1 = deduction1;
+      Deduction2 = deduction2;
+      Remark1 = remark1;
+      Remark2 = remark2;
+      Checkbox = checkbox;
+      LocalCreatedBy     = local_created_by;
+      LocalCreatedAt     = local_created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+
+}

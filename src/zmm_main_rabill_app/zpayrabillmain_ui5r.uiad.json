@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Maintain Measurement Book Approvals.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Maintain Measurement Book Approvals"
+  },
+  "ui5AppDetails": {
+    "appId": "zpayabsapprmain"
+  },
+  "navigation": {
+    "targetMappingId": "ZPAYRABILLMAIN_UI5R_TM",
+    "semanticObject": "zpayabsappmain",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZPAYRABILLMAIN_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Maintain Measurement Book Approvals"
+      }
+    }
+  ]
+}

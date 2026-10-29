@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "COP Approval",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "COP Approval"
+  },
+  "ui5AppDetails": {
+    "appId": "com.ominfra.approve"
+  },
+  "navigation": {
+    "targetMappingId": "ZAPPROVALAPP_2_UI5R_TM",
+    "semanticObject": "ZSO_APPROVE",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZAPPROVALAPP_2_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "COP Approval"
+      }
+    }
+  ]
+}

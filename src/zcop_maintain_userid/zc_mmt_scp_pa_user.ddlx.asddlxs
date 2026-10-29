@@ -1,0 +1,107 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'UserId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'UserId'
+annotate view ZC_MMT_SCP_PA_USER with
+{
+  @EndUserText.label: 'User Id'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'User ID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'User ID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  UserId;
+  
+  @EndUserText.label: 'User Name'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'UserName'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'UserName'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  UserName;
+  
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Created By'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Created By'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  LocalCreatedBy;
+  
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Created On'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Created On'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  LocalCreatedAt;
+  
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Changed By'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Changed By'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  LocalLastChangedBy;
+  
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  LocalLastChangedAt;
+  
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  LastChangedAt;
+}

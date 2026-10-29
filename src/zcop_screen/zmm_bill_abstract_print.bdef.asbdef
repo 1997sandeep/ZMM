@@ -1,0 +1,14 @@
+unmanaged implementation in class zbp_mm_bill_abstract_print unique;
+strict ( 2 );
+
+define behavior for ZMM_BILL_ABSTRACT_PRINT //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) Rabillno, Ebeln;
+}

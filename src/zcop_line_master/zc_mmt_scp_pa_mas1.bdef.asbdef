@@ -1,0 +1,17 @@
+projection implementation in class ZBP_C_MMT_SCP_PA_MAS1 unique;
+strict ( 2 );
+use draft;
+define behavior for ZC_MMT_SCP_PA_MAS1 alias ZcMmtScpPaMas1
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+}

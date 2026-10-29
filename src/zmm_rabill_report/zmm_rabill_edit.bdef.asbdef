@@ -1,0 +1,92 @@
+unmanaged implementation in class ZMM_RABILL_EDIT_CL unique;
+strict ( 1 );
+//with draft;
+
+define behavior for ZMM_RABILL_EDIT alias RABILL_EDIT
+//persistent table zmmt_scp_rabill1
+//draft table zmmt_rabill_edit
+//etag master LocalLastChangedAt
+lock master //total etag LastChangedAt
+authorization master ( global )
+
+{
+  field ( mandatory : create )
+  RaBillNo,
+  Ebeln,
+  Ebelp;
+
+  field ( readonly )
+  LocalCreatedAt,
+  LocalCreatedBy,
+  LastChangedAt,
+  LocalLastChangedAt,
+  LocalLastChangedBy;
+
+  field ( readonly : update )
+  RaBillNo,
+  Ebeln,
+  Ebelp;
+
+
+
+  create;
+  update;
+  delete;
+
+//  draft action Edit;
+//  draft action Activate;
+//  draft action Discard;
+//  draft action Resume;
+//  draft determine action Prepare;
+  mapping for zmmt_scp_rabill1
+    {
+      RaBillNo           = ra_bill_no;
+      Ebeln              = ebeln;
+      Ebelp              = ebelp;
+      Rcount             = rcount;
+      ThisBill           = this_bill;
+      ThisBillD          = this_bill_d;
+      HoldQty            = hold_qty;
+      ThisAct            = this_act;
+      Uom                = uom;
+      RaBillFrom         = ra_bill_from;
+      RaBillTo           = ra_bill_to;
+      SheetNo            = sheet_no;
+      FinalProces        = final_proces;
+      PostDate           = post_date;
+      WithoutDpr         = without_dpr;
+      Remarks            = remarks;
+      WoQtyNew           = wo_qty_new;
+      QtyDeduct          = qty_deduct;
+      QtyDeductUtd       = qty_deduct_utd;
+      AmtDeduct          = amt_deduct;
+      Cutover            = cutover;
+      RelHoldQty         = rel_hold_qty;
+      TotalHold          = total_hold;
+      QtyReducedReco     = qty_reduced_reco;
+      PrevHold           = prev_hold;
+      FinalBill          = final_bill;
+      ReversalNo         = reversal_no;
+      ReversalDate       = reversal_date;
+      Erdat              = erdat;
+      FinalProcess       = final_process;
+      Sesno              = sesno;
+      Rate               = rate;
+      ThisBillAmt        = this_bill_amt;
+      UptoPrevAmt        = upto_prev_amt;
+      UptoDateAmt        = upto_date_amt;
+      Zcurr              = zcurr;
+      MbsQty             = mbs_qty;
+      Deduction1 = deduction1;
+      Deduction2 = deduction2;
+      Remark1 = remark1;
+      Remark2 = remark2;
+      Checkbox = checkbox;
+      LocalCreatedBy     = local_created_by;
+      LocalCreatedAt     = local_created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+
+}

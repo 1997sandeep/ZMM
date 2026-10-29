@@ -1,0 +1,246 @@
+@Metadata.layer: #PARTNER
+@UI.headerInfo : {
+typeName: 'Subcontractor RA Bill Report',
+typeNamePlural: 'Payment Abstract Report',
+title: { type: #STANDARD, value: 'RaBillNo' },
+description: { type: #STANDARD, value: 'WoNumber' }}
+annotate entity ZMM_COP_REPORT2 with
+{
+  @UI.facet: [
+  {
+    id: 'idSelctionInformation',
+    type: #COLLECTION,
+    label: 'SelectionDetails',
+    position: 10
+    },
+     {
+     id: 'idRaBillDetails',
+     type: #IDENTIFICATION_REFERENCE,
+     label: 'RaBillDetails',
+     position: 20,
+     parentId: 'idSelctionInformation',
+     targetQualifier: 'tqRaBillData'
+    }
+  ]
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @EndUserText.label: 'Plant'
+  Plant;
+  @UI.lineItem: [{ position: 11 }]
+  @UI.selectionField: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'Company Code'
+  CompanyCode;
+  @UI.lineItem: [{ position: 20 }]
+  @EndUserText.label: 'Plant Name'
+  ProjectName;
+  @UI.lineItem: [{ position: 30 }]
+  @UI.selectionField: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: 'Vendor Code'
+  Vendor;
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  VendorName;
+  @UI.lineItem: [{ position: 50 }]
+  @UI.selectionField: [{ position: 40 }]
+  @UI.identification: [{ position: 50 }]
+  WoNumber;
+  @UI.lineItem: [{ position: 60 }]
+  @UI.selectionField: [{ position: 50 }]
+  @UI.identification: [{ position: 60 }]
+  @EndUserText.label: 'RABill No'
+  RaBillNo;
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  ApprovalStatus;
+  @UI.lineItem: [{ position: 75 }]
+  @UI.identification: [{ position: 75 }]
+  @EndUserText.label: 'Approver Name'
+  UserName;
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @EndUserText.label: 'Vendor PAN'
+  VendorPan;
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @EndUserText.label: 'Vendor GSTIN'
+  VendorGstin;
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @EndUserText.label: 'Invoice Date'
+  PostingDate;
+  @UI.lineItem: [{ position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  InvocieNumber;
+  @UI.lineItem: [{ position: 115 }]
+  @UI.identification: [{ position: 115 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Grand Total-As Per Bill'
+  GTBQ;
+  @UI.lineItem: [{ position: 130 }]
+  @UI.identification: [{ position: 130 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'CGST Amount'
+  CGST;
+  @UI.lineItem: [{ position: 140 }]
+  @UI.identification: [{ position: 140 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'SGST Amount'
+  SGST;
+  @UI.lineItem: [{ position: 150 }]
+  @UI.identification: [{ position: 150 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'IGST Amount'
+  IGST;
+  @UI.lineItem: [{ position: 160 }]
+  @UI.identification: [{ position: 160 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Total Amount(A)'
+  TOTA;
+  @UI.lineItem: [{ position: 170 }]
+  @UI.identification: [{ position: 170 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Mobilisation Advance'
+  ADMO;
+  @UI.lineItem: [{ position: 180 }]
+  @UI.identification: [{ position: 180 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Material Advance'
+  ADMT;
+  @UI.lineItem: [{ position: 190 }]
+  @UI.identification: [{ position: 190 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Machinery Advance'
+  ADMC;
+  @UI.lineItem: [{ position: 200 }]
+  @UI.identification: [{ position: 200  , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Advance Against WorkDone'
+  ADWD;
+  @UI.lineItem: [{ position: 210 }]
+  @UI.identification: [{ position: 210  , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Retention Release'
+  RERT;
+  @UI.lineItem: [{ position: 220 }]
+  @UI.identification: [{ position: 220  , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Safety Hold Release'
+  EXRR;
+  @UI.lineItem: [{ position: 230 }]
+  @UI.identification: [{ position: 230 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Security Deposit Release'
+  GSTP;
+  @UI.lineItem: [{ position: 240 }]
+  @UI.identification: [{ position: 240 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Delay Penalty Hold Release'
+  GSTG;
+  @UI.lineItem: [{ position: 250 }]
+  @UI.identification: [{ position: 250 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Quality Hold Release'
+  GSTR;
+  @UI.lineItem: [{ position: 260 }]
+  @UI.identification: [{ position: 260 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Other Hold Release'
+  TSDR;
+  @UI.lineItem: [{ position: 270 }]
+  @UI.identification: [{ position: 270 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Misc Deposit 1-Release'
+  OTR1;
+  @UI.lineItem: [{ position: 280 }]
+  @UI.identification: [{ position: 280 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'TDS Adjustment Addition'
+  OTR2;
+  @UI.lineItem: [{ position: 290 }]
+  @UI.identification: [{ position: 290 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Total Amount (B)'
+  TOTB;
+  @UI.lineItem: [{ position: 300 }]
+  @UI.identification: [{ position: 300 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Mobilisation Advance'
+  REMB;
+  @UI.lineItem: [{ position: 310 }]
+  @UI.identification: [{ position: 310 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Material Advance'
+  REMT;
+  @UI.lineItem: [{ position: 320 }]
+  @UI.identification: [{ position: 320 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Advance Against WorkDone'
+  REWD;
+  @UI.lineItem: [{ position: 330 }]
+  @UI.identification: [{ position: 330 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Machinery Advance'
+  EWMC;
+  @UI.lineItem: [{ position: 340 }]
+  @UI.identification: [{ position: 340 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Retention Money(HOLD)'
+  REWO;
+  @UI.lineItem: [{ position: 350 }]
+  @UI.identification: [{ position: 350 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'TDS Adjustment Deduction'
+  TDSA;
+  @UI.lineItem: [{ position: 360 }]
+  @UI.identification: [{ position: 360 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Safety Hold'
+  EXRH;
+  @UI.lineItem: [{ position: 370 }]
+  @UI.identification: [{ position: 370 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Security Deposit'
+  GSTH;
+  @UI.lineItem: [{ position: 380 }]
+  @UI.identification: [{ position: 380 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Delay Penalty Hold'
+  GSTS;
+  @UI.lineItem: [{ position: 390 }]
+  @UI.identification: [{ position: 390 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Quality Hold'
+  GSTD;
+  @UI.lineItem: [{ position: 400 }]
+  @UI.identification: [{ position: 400 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Other Hold'
+  TSDH;
+  @UI.lineItem: [{ position: 410 }]
+  @UI.identification: [{ position: 410 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Misc Deposit 1(HOLD)'
+  OTH1;
+  @UI.lineItem: [{ position: 420 }]
+  @UI.identification: [{ position: 420 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Safety Deduction'
+  OTH2;
+  @UI.lineItem: [{ position: 430 }]
+  @UI.identification: [{ position: 430 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Delay Penalty Deduction'
+  MTRE;
+  @UI.lineItem: [{ position: 440 }]
+  @UI.identification: [{ position: 440 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Quality Deduction'
+  DSEL;
+  @UI.lineItem: [{ position: 450 }]
+  @UI.identification: [{ position: 450 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Other Deduction'
+  OTDD;
+  @UI.lineItem: [{ position: 490 }]
+  @UI.identification: [{ position: 490 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Total Deduction(C)'
+  TOTC;
+  @UI.lineItem: [{ position: 500 }]
+  @UI.identification: [{ position: 500 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Income Tax (TDS) for Work Done'
+  SDIT;
+  @UI.lineItem: [{ position: 510 }]
+  @UI.identification: [{ position: 510 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Total Deduction(D)'
+  TOTD;
+  @UI.lineItem: [{ position: 520 }]
+  @UI.identification: [{ position: 520 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Amount Payable(A+B-C-D)'
+  AMTP;
+  @UI.lineItem: [{ position: 530 }]
+  @UI.identification: [{ position: 530 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Invoice Document No'
+  InvoiceDocumentNo;
+  @UI.lineItem: [{ position: 540 }]
+  @UI.identification: [{ position: 540 , qualifier: 'tqRaBillData' }]
+  @EndUserText.label: 'Invoice Document Year'
+  InvoiceDocYear;
+  @UI.lineItem: [{ position:  550 }]
+  @UI.identification: [{ position: 550 , qualifier: 'tqRaBillData'  }]
+  @EndUserText.label: 'Billing Date'
+  BillDate;
+  @UI.lineItem: [{hidden: true}]
+  @UI.identification: [{hidden: true}]
+  @UI.hidden: true
+  zcurr;
+}

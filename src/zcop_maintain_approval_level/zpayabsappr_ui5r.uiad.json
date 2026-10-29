@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Maintain approval level",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "COP-Maintain Approval Level"
+  },
+  "ui5AppDetails": {
+    "appId": "zpayabsappr.zmmpayabsappr"
+  },
+  "navigation": {
+    "targetMappingId": "ZPAYABSAPPR_UI5R_TM",
+    "semanticObject": "zsopayabsappr",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZPAYABSAPPR_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "COP-Maintain Approval Level",
+        "subtitle": "{{flpSubtitle}}"
+      }
+    }
+  ]
+}

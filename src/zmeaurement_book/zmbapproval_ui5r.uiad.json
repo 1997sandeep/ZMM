@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Measurement Book Approval",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Measurement Book Approval"
+  },
+  "ui5AppDetails": {
+    "appId": "com.ominfra.zmbapproval"
+  },
+  "navigation": {
+    "targetMappingId": "ZMBAPPROVAL_UI5R_TM",
+    "semanticObject": "zmbapproval",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZMBAPPROVAL_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Measurement Book Approval"
+      }
+    }
+  ]
+}

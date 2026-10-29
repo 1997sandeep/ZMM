@@ -1,0 +1,49 @@
+managed implementation in class ZBP_R_MMT_SCP_BUSCODE unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_MMT_SCP_BUSCODE alias ZrMmtScpBuscode
+persistent table ZMMT_SCP_BUSCODE
+draft table ZMMT_SCP_BUSCO_D
+etag master Locallastchangedat
+lock master total etag Lastchangedat
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Companycode,
+   Businessplace;
+
+  field ( readonly )
+   Localcreatedby,
+   Localcreatedat,
+   Locallastchangedby,
+   Locallastchangedat,
+   Lastchangedat;
+
+  field ( readonly : update )
+   Companycode,
+   Businessplace;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZMMT_SCP_BUSCODE
+  {
+    Companycode = companycode;
+    Businessplace = businessplace;
+    Businessplacedesc = businessplacedesc;
+    Localcreatedby = localcreatedby;
+    Localcreatedat = localcreatedat;
+    Locallastchangedby = locallastchangedby;
+    Locallastchangedat = locallastchangedat;
+    Lastchangedat = lastchangedat;
+  }
+}

@@ -1,0 +1,8 @@
+@EndUserText.label: 'Service Defination For Payment Milestone'
+define service ZMM_PAY_MLSTN_SD {
+  expose ZMM_PAY_MLSTN_CDS1  as zmm_mlstn;
+  expose ZMM_PAY_MLSTN_WO_F4 as F4_ebeln;
+  expose ZMM_PAY_MLSTN_H     as Header;
+  expose ZMM_PAY_MLSTN_I     as ItemSet;
+  expose ZMM_PAY_MLSTN_WO    as WOSet;
+}

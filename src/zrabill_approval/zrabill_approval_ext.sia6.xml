@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZRABILL_APPROVAL_EXT</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>App for Rabill Approval</DESCRIPTION>
+     <RESPONSIBLE>CB9980000010</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>HX7</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>ZRABILL_APPROVAL</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>ZRABILL_APPROVAL_EXT</APP_ID>
+    <APP_TYPE>EXT</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <UI_APP_ID>ZMMRAEDITE1_3_UI5R</UI_APP_ID>
+    <SERVICE>
+     <item>
+      <REL_NAME>ZMM_RABILL_EDIT_NEW_V4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZRABILL_APPROVAL_EXT</APP_ID>
+      <SRVC_NAME>31683DAF76A2E27A4D784D080059EE</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <UIAD_SRC>ZMMRAEDITE1_3_UI5R</UIAD_SRC>
+      <TEXT>service binding for Rabill approval</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZMM_RABILL_EDIT_SERV1</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZRABILL_APPROVAL_EXT</APP_ID>
+      <SRVC_NAME>2864FF782FDE454429E0AED90BA1FA</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <UIAD_SRC>ZMMRAEDITE1_3_UI5R</UIAD_SRC>
+      <TEXT>service binding for Rabill approval</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+     <item>
+      <REL_NAME>ZMM_RABILL_EDIT_SERV1_V2           0001</REL_NAME>
+      <REL_TYPE>IWSV</REL_TYPE>
+      <APP_ID>ZRABILL_APPROVAL_EXT</APP_ID>
+      <SRVC_NAME>C3E506777EF7E5A7792C666EEA8034</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>service binding for Rabill approval</TEXT>
+      <TYPE_TEXT>OData V2</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+    <RTYPE_MIG_STATUS>3</RTYPE_MIG_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>

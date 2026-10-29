@@ -1,0 +1,8 @@
+@EndUserText.label: 'RA Bill edit Service Defination'
+define service ZMM_RABILL_APPROVAL_SD {
+  expose ZMM_RABILL_APPROVAL  as rabill_app;
+  expose ZMM_RABILL_FIRST_SCR as rabill_scr1;
+  expose ZMM_RA_BILL_DISP     as rabill_ch;
+  expose ZMM_SCP_RABILL_H     as rabill_head;
+  expose ZMM_SES_NO           as sesno;
+}

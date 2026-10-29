@@ -1,0 +1,26 @@
+@EndUserText.label: 'Service definition COP'
+define service ZMM_RABILL_PAY_ASBSTRACT {
+  expose ZMM_RABILL_PAY_ABSTRACT_HEAD1  as RABillHeaderDetails;
+  expose ZMM_RABILL_PAY_ABSTRACT_APPROV as ApprovalDetails;
+  expose ZRABILL_GL_F4_1                as GLAccount_F4;
+  expose ZMM_RABILL_PAY_ABSTRACT_HB     as HouseBank_F4;
+  expose ZMM_RABILL_PAY_ABSTRACT_FINAL  as ItemDetails;
+  expose ZMM_RABILL_PAYABST_DISPLAY     as DisplayHeader;
+  expose ZMM_RABILL_PAYABST_DISPLAYITEM as DisplayItem;
+  expose ZMM_RABILL_PAYABST_FRTSCR      as onescr;
+  expose ZMM_SCP_RABILL_I               as FirstScr;
+  expose ZMM_RABILL_PAY_ABSTRACT_BP     as BusinessPlace;
+  expose ZMM_RABILL_PAY_ABS_VALD        as RaBillValidation;
+  expose ZMM_RABILL_PAY_ABS_APPROVER    as ApproverDisplay;
+  expose ZMM_RABILL_PAY_APPROVAL_DSP    as LevelDisplay;
+  expose ZMM_RABILL_PAY_APPR_DSP_Val    as ApproverScreen;
+  expose ZMM_RABILL_PAY_APPR_DSP_REJ    as RejectRabill;
+  expose ZMM_RABILL_PAY_ADVANCE_CV1     as AdvanceRabill;
+  expose ZC_ATTACH_TAB                  as zattach;
+  expose ZC_ATTACH_TAB_VIEW             as zattach_read;
+  expose ZMM_BILL_ABSTRACT_PRINT        as AdobePrint;
+  expose ZMM_PAYABS_PRCTR               as ProfitCenterF4;
+  expose ZMM_RABILL_FIRST_SCR           as ses_valid;
+  expose ZRABILL_Retention1             as Retention;
+  expose Zzcopmaterial_ded_CDS          as MatDeduction;
+}

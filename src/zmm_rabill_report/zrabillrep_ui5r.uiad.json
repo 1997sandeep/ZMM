@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "RA Bill Report"
+  },
+  "ui5AppDetails": {
+    "appId": "zrabillrep.zrabillrep"
+  },
+  "navigation": {
+    "targetMappingId": "ZRABILLREP_UI5R_TM",
+    "semanticObject": "zrabillrep",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZRABILLREP_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "RA Bill Report",
+        "subtitle": "MM"
+      }
+    }
+  ]
+}

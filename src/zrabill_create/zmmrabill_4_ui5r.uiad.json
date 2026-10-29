@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "A Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "RA Bill Create"
+  },
+  "ui5AppDetails": {
+    "appId": "com.ra.rabill"
+  },
+  "navigation": {
+    "targetMappingId": "ZMMRABILL_4_UI5R_TM",
+    "semanticObject": "rasemobj",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZMMRABILL_4_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "RA Bill Create",
+        "subtitle": "RA Bill Create"
+      }
+    }
+  ]
+}

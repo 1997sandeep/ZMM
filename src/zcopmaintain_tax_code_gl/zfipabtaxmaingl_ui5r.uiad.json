@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Maintain Taxcode GL for COP"
+  },
+  "ui5AppDetails": {
+    "appId": "payabtaxmaingl"
+  },
+  "navigation": {
+    "targetMappingId": "ZFIPABTAXMAINGL_UI5R_TM",
+    "semanticObject": "ZSOPAYABTAXMAIGL",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZFIPABTAXMAINGL_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Maintain Taxcode GL for COP"
+      }
+    }
+  ]
+}

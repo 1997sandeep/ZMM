@@ -1,0 +1,4 @@
+@EndUserText.label: 'RABill Report'
+define service ZRABILL_REPORT {
+  expose ZRABILL_SITC as Rabillreport;
+}

@@ -1,0 +1,40 @@
+unmanaged implementation in class zbp_mm_ra_bill_mbsheet_cds1 unique;
+strict ( 1 );
+
+define behavior for ZMM_RA_BILL_MBSHEET_CDS1 alias zmm_mbsheet
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  field (mandatory : create)
+  RaBillNo,
+  Ebeln,
+  Ebelp,
+  SplitItemNo;
+
+  field ( readonly : update)
+  RaBillNo,
+  Ebeln,
+  Ebelp,
+  SplitItemNo;
+
+  create;
+  update;
+  delete;
+  mapping for zmmt_rab_mbsheet
+  {
+    RaBillNo = ra_bill_no;
+    Ebeln = ebeln;
+    Ebelp = ebelp;
+    SplitItemNo = split_item_no;
+    SplitItem = split_item;
+    Percentage = percentage;
+    WorkDoneQty = work_done_qty;
+    TotalQty = total_qty;
+    PrevQty = prev_qty;
+    UptoQty = upto_qty;
+    pre_wd_qty =  pre_wd_qty;
+
+  }
+}

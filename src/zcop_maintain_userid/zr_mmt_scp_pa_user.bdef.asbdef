@@ -1,0 +1,46 @@
+managed implementation in class ZBP_R_MMT_SCP_PA_USER unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_MMT_SCP_PA_USER alias ZrMmtScpPaUser
+persistent table ZMMT_SCP_PA_USER
+draft table ZMMT_SCP_PA_US_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   UserId;
+
+  field ( readonly )
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   UserId;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZMMT_SCP_PA_USER
+  {
+    UserId = user_id;
+    UserName = user_name;
+    LocalCreatedBy = local_created_by;
+    LocalCreatedAt = local_created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+  }
+}

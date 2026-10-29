@@ -1,0 +1,30 @@
+unmanaged implementation in class zbp_mm_rabill_pay_abstract_hea unique;
+strict ( 1 );
+
+define behavior for ZMM_RABILL_PAY_ABSTRACT_HEAD1 alias zmm_payabstract
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  field ( readonly : update ) Rabillno, Ebeln;
+
+  create;
+  update;
+  delete;
+  mapping for zmmt_scp_pa_h1
+    {
+      Rabillno      = ra_bill_no;
+      Ebeln         = ebeln;
+      GlAccNo       = gl_acc;
+      HouseBankId   = hbkid;
+      AccountId     = hktid;
+      VendorInvoice = vendor_invoice;
+      Plant         = bukrs;
+      BillDate      = bill_date;
+      PostingDate   = post_date;
+      BusinessPlace = bupla;
+      ProfitCenter = prctr;
+      Sectioncode = sectioncode;
+    }
+}

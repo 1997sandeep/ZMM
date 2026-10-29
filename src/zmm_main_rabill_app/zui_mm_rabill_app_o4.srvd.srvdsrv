@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_MAIN_Rabill_APP_CDS'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_MAIN_Rabill_APP_CDS'
+  }
+}
+define service ZUI_MM_RABILL_APP_O4
+  provider contracts odata_v4_ui {
+  expose ZC_MAIN_Rabill_APP_CDS;
+}

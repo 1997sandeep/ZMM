@@ -1,0 +1,55 @@
+@AbapCatalog.sqlViewName: 'ZMMRABILLREP'
+@AbapCatalog.compiler.compareFilter: true
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'RABILL REPORT'
+define view ZMM_RABILL_REPORT
+  as select from zmmt_scp_ra_payi
+{
+  key ra_bill_no as RaBillNo,
+      itm_code   as ItmCode,
+      zcurr,
+
+      case itm_code when 'GTBQ' then cast( cast( thisbill as abap.curr( 13, 2 ) ) as abap.curr( 13, 2 ) ) else 0 end as GrandTotalBOQ,
+      case itm_code when 'CGST' then cast( cast( thisbill as abap.curr( 13, 2 ) ) as abap.curr( 13, 2 ) ) else 0 end as CgstAmt,
+      case itm_code when 'SGST' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as SgstAmt,
+      case itm_code when 'IGST' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as IgstAmt,
+      case itm_code when 'TOTA' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as TotalAmountA,
+      case itm_code when 'ADMO' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as MobilisationAdvance,
+      case itm_code when 'ADMT' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as MaterialAdvance,
+      case itm_code when 'ADMC' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as MachineryAdvance,
+      case itm_code when 'ADWD' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as AdvanceAgainstWorkDone,
+      case itm_code when 'ROYL' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as Royalty,
+      case itm_code when 'RERT' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as Retention,
+      case itm_code when 'EXRR' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as ExtRetRel,
+      case itm_code when 'GSTP' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as GstPartVHoldDept,
+      case itm_code when 'GSTG' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as GSTSubConHold,
+      case itm_code when 'GSTR' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as GSTTDSHold,
+      case itm_code when 'TSDR' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as TestingDepositHold,
+      case itm_code when 'OTR1' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as MiscDeposit1,
+      case itm_code when 'OTR2' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as MiscDeposit2,
+      case itm_code when 'TOTB' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as TotalAmountB,
+      case itm_code when 'REMB' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DMobilisationAdvance,
+      case itm_code when 'REMT' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DMaterialAdvance,
+      case itm_code when 'REWD' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DAdvanceAgainstWorkDone,
+      case itm_code when 'EWMC' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DMachineryAdvance,
+      case itm_code when 'RRYL' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DRoyalty,
+      case itm_code when 'REWO' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DRetentionMoney,
+      case itm_code when 'TDSA' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as TDSAdjustment,
+      case itm_code when 'EXRH' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as SafetyHold,
+      case itm_code when 'GSTH' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DGstPartVHoldDept,
+      case itm_code when 'GSTS' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DGstSubConHold,
+      case itm_code when 'GSTD' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DGSTTDSHold,
+      case itm_code when 'TSDH' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DTestingDepositHold,
+      case itm_code when 'OTH1' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DMiscDeposit1,
+      case itm_code when 'OTH2' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DMiscDeposit2,
+      case itm_code when 'MTRE' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as MaterialRecovery,
+      case itm_code when 'DSEL' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as DieselConsumption,
+      case itm_code when 'OTDD' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as OtherDeduction,
+      case itm_code when 'CGMT' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as MatDslCGST,
+      case itm_code when 'SGMT' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as MatDslSGST,
+      case itm_code when 'IGMT' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as MatDslIGST,
+      case itm_code when 'TOTC' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as TotalDeductionC,
+      case itm_code when 'SDIT' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as IncomeTaxTDS,
+      case itm_code when 'TOTD' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as TotalDeductionD,
+      case itm_code when 'AMTP' then cast( thisbill as abap.curr( 13, 2 ) ) else 0 end as AmountPayable
+}

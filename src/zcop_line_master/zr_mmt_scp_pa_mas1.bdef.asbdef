@@ -1,0 +1,55 @@
+managed implementation in class ZBP_R_MMT_SCP_PA_MAS1 unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_MMT_SCP_PA_MAS1 alias ZrMmtScpPaMas1
+persistent table ZMMT_SCP_PA_MAS1
+draft table ZMMT_SCP_PA_MA_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   SrNoN;
+
+  field ( readonly )
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   SrNoN;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZMMT_SCP_PA_MAS1
+  {
+    SrNoN = sr_no_n;
+    SrNoC = sr_no_c;
+    ItmCode = itm_code;
+    Description = description;
+    GlCode = gl_code;
+    Shkzg = shkzg;
+    Umskz = umskz;
+    Deduction = deduction;
+    Manual = manual;
+    Addition = addition;
+    CukyField = cuky_field;
+    LocalCreatedBy = local_created_by;
+    LocalCreatedAt = local_created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+  }
+}

@@ -1,0 +1,7 @@
+@EndUserText.label: 'Subcontractor Stock Issue'
+define service ZSUB_STOCK_ISSUE__SD {
+  expose ZI_SUB_STOCK_ISSUES       as main_data;
+  expose ZSUB_STOCK_ISSUES_HEADER  as header_data;
+  expose ZSUB_STOCK_ISSUES_ITEM    as item_data;
+  expose ZSUB_STOCK_ISSUES_DISPLAY as display_data;
+}

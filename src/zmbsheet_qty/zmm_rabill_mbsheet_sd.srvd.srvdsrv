@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Def For RABILL MBSHEET Qty'
+define service ZMM_RABILL_MBSHEET_SD {
+  expose ZMM_RA_BILL_MBSHEET_CDS1 as zmm_mbsheet;
+}

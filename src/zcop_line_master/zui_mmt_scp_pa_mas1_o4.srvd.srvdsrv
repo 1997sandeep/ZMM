@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_MMT_SCP_PA_MAS1'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_MMT_SCP_PA_MAS1'
+  }
+}
+define service ZUI_MMT_SCP_PA_MAS1_O4
+  provider contracts odata_v4_ui {
+  expose ZC_MMT_SCP_PA_MAS1;
+}

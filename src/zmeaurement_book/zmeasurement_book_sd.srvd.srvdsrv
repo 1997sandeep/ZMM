@@ -1,0 +1,19 @@
+@EndUserText.label: 'service defination for Measurement Book'
+define service ZMeasurement_Book_SD {
+  expose ZMEA_BOOL_HEADER       as measurementbook_header;
+  expose ZMEAS_BOOK_CDS         as measurementbook_item;
+  expose zpo_no                 as pono;
+  expose ZMB_MAX                as mbno;
+  expose ZI_MEAS_BOOK_HEAD      as MEAS_BOOK_HEAD;
+  expose ZI_MEAS_BOOK           as Meas_book_item;
+  expose ZMMMB_FIRST_SCREEN     as first_screen;
+  expose ZMM_MB_DISPLAY_CDS     as mb_display;
+  expose ZMB_DATA_DET           as mb_det;
+  expose ZMB_SHEET_DATA_CREATE  as create_header;
+  expose ZMB_DISPLAY_DATA1      as dispaydata1;
+  expose ZMEASUREMENT_APPROVER  as ApproverDisplay;
+  expose ZMM_MB_APPR_DSP_Val    as ApproverScreen;
+  expose ZMM_MBOOK_APPROVAL_DSP as Leveldisplay;
+  expose ZAPPROVAL_REMARK       as approv_remark;
+  expose ZMB_APPROVER_DETAILS   as ApprovalDetails;
+}

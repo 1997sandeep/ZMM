@@ -1,0 +1,42 @@
+unmanaged implementation in class zbp_mm_pay_mlstn_cds1 unique;
+strict ( 1 );
+
+define behavior for ZMM_PAY_MLSTN_CDS1 alias zmm_mlstn
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+
+field (mandatory : create)
+Ebeln,
+Ebelp,
+SplitItemNo;
+
+//  field ( readonly )
+//   LocalCreatedAt,
+//   LocalCreatedBy,
+//   LastChangedAt,
+//   LocalLastChangedAt,
+//   LocalLastChangedBy;
+
+  field ( readonly : update)
+   Ebeln,
+   Ebelp,
+   SplitItemNo;
+
+  create;
+  update;
+  delete;
+  mapping for zmm_pay_mlstn
+  {
+    Ebeln = ebeln;
+    Ebelp = ebelp;
+    SplitItemNo = split_item_no;
+    ZvendCode = zvend_code;
+    Zproject = zproject;
+    SplitItem = split_item;
+    Percentage = percentage;
+  }
+
+}

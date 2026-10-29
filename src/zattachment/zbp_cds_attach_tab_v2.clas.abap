@@ -1,0 +1,5 @@
+CLASS zbp_cds_attach_tab_v2 DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zcds_attach_tab_v2.
+ENDCLASS.
+
+CLASS zbp_cds_attach_tab_v2 IMPLEMENTATION.
+ENDCLASS.

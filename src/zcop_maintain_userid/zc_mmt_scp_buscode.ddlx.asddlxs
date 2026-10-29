@@ -1,0 +1,118 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Companycode'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Companycode'
+annotate view ZC_MMT_SCP_BUSCODE with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Company Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Company Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Companycode;
+  
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Business Place'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Business Place'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Businessplace;
+  
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Description'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Description'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Businessplacedesc;
+  
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Created By'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Created By'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Localcreatedby;
+  
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Created On'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Created On'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Localcreatedat;
+  
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Changed By'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Changed By'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Locallastchangedby;
+  
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Locallastchangedat;
+  
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Lastchangedat;
+}

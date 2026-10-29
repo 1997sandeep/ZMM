@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Record site measurements against a Workorder / Service PO and post to ZMMT_SCP_MB",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Measurement Book (ZMM_MB)"
+  },
+  "ui5AppDetails": {
+    "appId": "zmmmb"
+  },
+  "navigation": {
+    "targetMappingId": "ZMEASURMENTBOOK_UI5R_TM",
+    "semanticObject": "MeasurementBook",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZMEASURMENTBOOK_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Measurement Book (ZMM_MB)"
+      }
+    }
+  ]
+}

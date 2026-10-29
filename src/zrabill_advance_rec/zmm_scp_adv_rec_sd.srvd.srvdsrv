@@ -1,0 +1,9 @@
+@EndUserText.label: 'Service Definition - Rabill Advance recovery'
+define service ZMM_SCP_ADV_REC_SD {
+  expose ZMM_SCP_ADV_REC   as rabill_rec;
+  expose ZMM_ADV_REC_H     as recov_h;
+  expose ZMM_RABILL_REC_F4 as rabill_f4;
+  expose ZMM_RAB_ADV_REC_I as recov_i;
+  expose ZMM_ADV_REC_DISP  as recov_disp;
+  expose ZMM_ADV_REC_CHNG  as recov_ch;
+}

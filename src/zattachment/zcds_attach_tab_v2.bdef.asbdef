@@ -1,0 +1,49 @@
+unmanaged implementation in class zbp_cds_attach_tab_v2 unique;
+strict ( 1 );
+
+define behavior for ZCDS_ATTACH_TAB_V2 alias zattach_tab
+//late numbering
+lock master
+authorization master ( global )
+//etag master <field_name>
+{
+
+  field ( mandatory : create )
+  DocType,
+  DocNo,
+  FileName;
+
+  field ( readonly )
+  LocalCreatedAt,
+  LocalCreatedBy,
+  LastChangedAt,
+  LocalLastChangedAt,
+  LocalLastChangedBy;
+
+  field ( readonly : update )
+  DocType,
+  DocNo,
+  FileName;
+
+  create;
+  update;
+  delete;
+
+   mapping for ZATTACH_TABB
+  {
+    DocType = doc_type;
+    DocNo = doc_no;
+    FileName = file_name;
+    FileType = file_type;
+    FileSize = file_size;
+    FileContents = file_contents;
+    Delflag = delflag;
+    Localcreatedby = localcreatedby;
+    Localcreatedat = localcreatedat;
+    Locallastchangedby = locallastchangedby;
+    Locallastchangedat = locallastchangedat;
+    Lastchangedat = lastchangedat;
+  }
+
+
+}

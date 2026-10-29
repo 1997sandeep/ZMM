@@ -1,0 +1,16 @@
+@EndUserText.label: 'service defination for Rabill'
+define service ZMMT_SCP_RA_BILL_SD {
+  expose ZMMT_SCP_RA_BILL_CDS1 as zscp_rabill;
+  expose ZMM_SCP_RABILL_I      as rabill_item;
+  expose zmm_f4_ebeln          as F4_ebeln;
+  expose ZMM_SCP_RABILL_H      as rabill_head;
+  expose ZMM_RA_BILL_NO_VAL    as rabill_det;
+  expose ZMM_RA_BILL_ITEM      as rabill_i;
+  expose ZMM_RA_BILL_ITEM_2    as rabill_sec;
+  expose ZMM_RABILL_FIRST_SCR  as rabill_scr1;
+  expose ZMM_RA_BILL_DISP      as rabill_disp;
+  expose ZMM_SESNO_VAL         as sesno;
+  expose ZMMMB_QTY             as pay_mlstn;
+  expose ZMB_NO                as mbno;
+  expose ZRABILL_DED           as rabill_ded;
+}

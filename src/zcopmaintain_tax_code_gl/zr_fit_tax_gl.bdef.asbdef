@@ -1,0 +1,46 @@
+managed implementation in class ZBP_R_FIT_TAX_GL unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_FIT_TAX_GL alias ZrFitTaxGl
+persistent table ZFIT_TAX_GL
+draft table ZFIT_TAX_GL_D
+etag master Locallastchangedat
+lock master total etag Lastchangedat
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Taxcode;
+
+  field ( readonly )
+   Localcreatedby,
+   Localcreatedat,
+   Locallastchangedby,
+   Locallastchangedat,
+   Lastchangedat;
+
+  field ( readonly : update )
+   Taxcode;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZFIT_TAX_GL
+  {
+    Taxcode = taxcode;
+    Hkont = hkont;
+    Localcreatedby = localcreatedby;
+    Localcreatedat = localcreatedat;
+    Locallastchangedby = locallastchangedby;
+    Locallastchangedat = locallastchangedat;
+    Lastchangedat = lastchangedat;
+  }
+}

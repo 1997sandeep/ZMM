@@ -1,0 +1,35 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "maintain tax code",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "COP-Maintain Tax code"
+  },
+  "ui5AppDetails": {
+    "appId": "zpayabstax.zmmpayabstax"
+  },
+  "navigation": {
+    "targetMappingId": "ZPAYABSTAX_UI5R_TM",
+    "semanticObject": "zsopayabstax",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "ZPAYABSTAX_UI5R_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "COP-Maintain Tax code",
+        "subtitle": "COP-Maintain Tax code"
+      }
+    }
+  ]
+}

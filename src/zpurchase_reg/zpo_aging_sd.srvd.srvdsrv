@@ -1,0 +1,4 @@
+@EndUserText.label: 'service defination for PO Aging'
+define service ZPO_AGING_SD {
+  expose ZPO_AGING_ENTITY;
+}

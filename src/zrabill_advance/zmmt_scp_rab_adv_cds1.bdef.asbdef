@@ -1,0 +1,56 @@
+unmanaged implementation in class zbp_mmt_scp_rab_adv_cds1 unique;
+strict ( 1 );
+
+define behavior for ZMMT_SCP_RAB_ADV_CDS1 alias zscp_rab_adv
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  field ( readonly:update ) RaBillNo,
+                            advtype;
+
+  field ( readonly )
+  LocalCreatedAt,
+  LocalCreatedBy,
+//  LastChangedAt,
+  LocalLastChangedAt,
+  LocalLastChangedBy;
+
+
+  create;
+  update;
+  delete;
+  mapping for zmmt_scp_rab_ad1 // control zmmt_scp_rab_adv
+    {
+      RaBillNo           = ra_bill_no;
+      Ebeln              = ebeln;
+      Prinvoice          = prinvoice;
+      PrinvoiceDate      = prinvoice_date;
+      WorkFrom           = work_from;
+      WorkTo             = work_to;
+      AdvType            = adv_type;
+      Rcount             = rcount;
+      RecStrt            = rec_strt;
+      RecEnd             = rec_end;
+      CumWdAmt           = cum_wd_amt;
+      TisWdAmt           = tis_wd_amt;
+      PerWorkDone        = per_work_done;
+      AdvPaid            = adv_paid;
+      Amount             = amount;
+      Gst                = gst;
+      TotAdv             = tot_adv;
+      RecThBillC         = rec_th_bill_c;
+      RecThBillM         = rec_th_bill_m;
+      RecTill            = rec_till;
+      RecUpDate          = rec_up_date;
+      BalTorec           = bal_torec;
+      FinalProces        = final_proces;
+      LocalCreatedBy     = local_created_by;
+      LocalCreatedAt     = local_created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+ //     LastChangedAt      = last_changed_at;
+    }
+
+}

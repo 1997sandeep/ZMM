@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_FIT_TAX_GL'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_FIT_TAX_GL'
+  }
+}
+define service ZUI_FIT_TAX_GL_O4
+  provider contracts odata_v4_ui {
+  expose ZC_FIT_TAX_GL;
+}

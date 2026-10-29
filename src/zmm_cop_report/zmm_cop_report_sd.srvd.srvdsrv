@@ -1,0 +1,4 @@
+@EndUserText.label: 'COP Report Service'
+define service ZMM_COP_REPORT_SD {
+  expose ZMM_COP_REPORT2 as Report;
+}

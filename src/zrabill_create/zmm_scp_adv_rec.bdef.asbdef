@@ -1,0 +1,55 @@
+unmanaged implementation in class ZMM_SCP_ADV_REC_CL unique;
+strict ( 1 );
+
+define behavior for ZMM_SCP_ADV_REC alias RABILL_REC
+lock master //total etag LastChangedAt
+authorization master ( global )
+
+{
+  field ( mandatory : create )
+  RaBillNo;
+
+  field ( readonly )
+  LocalCreatedAt,
+  LocalCreatedBy,
+  LastChangedAt,
+  LocalLastChangedAt,
+  LocalLastChangedBy;
+
+  field ( readonly : update )
+  RaBillNo;
+
+  create;
+  update;
+  delete;
+  mapping for zmmt_scp_rab_rec
+    {
+      RaBillNo           = ra_bill_no;
+      AdvType            = adv_type;
+      AdvRec             = adv_rec;
+      Ebeln              = ebeln;
+      InvNo              = inv_no;
+      InvDate            = inv_date;
+      Rcount             = rcount;
+      CumWdAmt           = cum_wd_amt;
+      TisWdAmt           = tis_wd_amt;
+      PerWorkDone        = per_work_done;
+      AdvPaiD            = adv_paid;
+      RecThBillC         = rec_th_bill_c;
+      RecThBillM         = rec_th_bill_m;
+      RecTill            = rec_till;
+      RecThisBill        = rec_this_bill;
+      RecUpDate          = rec_up_date;
+      BalTorec           = bal_torec;
+      FinalProces        = final_proces;
+      TotWoAmt           = tot_wo_amt;
+      Zcurr              = zcurr;
+      LocalCreatedBy     = local_created_by;
+      LocalCreatedAt     = local_created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+
+
+}

@@ -1,0 +1,10 @@
+@EndUserText.label: 'Service Definition - Rabill Advance posting'
+define service ZMMT_SCP_RAB_ADV_SD1 {
+  expose ZMMT_SCP_RAB_ADV_CDS1;
+  expose ZMM_F4_RABILL_ADV1           as F4_WO;
+  expose ZMMT_SCP_RAB_ADV_HEADER_CDS1 as Header;
+  expose ZMM_RAB_ADV_NO               as rabill_no;
+  expose ZMMT_SCP_RAB_ADV_DET         as rab_adv_det;
+  expose ZMMT_SCP_RAB_ADV_CDS2        as tnc_per;
+  expose ZMM_RAB_ADV_WOMAX            as WoMax;
+}
